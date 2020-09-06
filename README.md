@@ -1,5 +1,5 @@
 # Codebuild-Updater
-A Script to update AWS Codebuild Environment Variables
+A Script to update AWS Codebuild Projects Environment Variables
 
 # Requirements
 - AWS CLI version 2
@@ -8,7 +8,7 @@ A Script to update AWS Codebuild Environment Variables
 
 # Usage
 ```
-chmod +x codebuild_updater.sh
-./codebuild_updater.sh
+chmod +x Update_Env.sh
+./Update_Env.sh
 ```
 Set the environment variables in the **env_var.json** file
