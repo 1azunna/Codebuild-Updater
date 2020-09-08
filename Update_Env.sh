@@ -167,9 +167,9 @@ read -rp $'
                       fi
                     else
                       get_lineNumbers
-                      newVar=$(sed -n ''$prev_line,$next3_line' p' $envfile1)
+                      newVar=$(cat $envfile1 | jq -S '.environmentVariables[]' | sed -n ''$prev_line,$next3_line' p' )
                       echo $newVar >> $envfile2
-                      echo -e "\x1B[0;33m New Environment Variable(s) Added \x1B[0m"
+                      echo -e "\x1B[0;33m New Environment Variable \x1B[0;32m$var\x1B[0m \x1B[0;33m Added \x1B[0m"
                     fi
                   done
                 update_env
